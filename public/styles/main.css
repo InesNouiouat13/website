@@ -6,7 +6,8 @@ body {
     background-position: center;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px); 
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 130vh;
 }
 
 .content-container {
