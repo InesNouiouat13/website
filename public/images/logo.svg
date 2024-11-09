@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="750" viewBox="0 0 1920 750">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a40093;
+      }
+
+      .cls-2 {
+        font-size: 833.333px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+        font-family: Aldhabi;
+      }
+
+      .cls-3 {
+        font-family: "Franklin Gothic Medium";
+        font-size: 458.333px;
+      }
+
+      .cls-4 {
+        font-size: 354.167px;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M10,0H1660a250,250,0,0,1,250,250V750a0,0,0,0,1,0,0H260A250,250,0,0,1,10,500V0A0,0,0,0,1,10,0Z"/>
+  <text id="Softnes" class="cls-2" x="162" y="463">So<tspan class="cls-3">f</tspan>tnes</text>
+  <text id="Nouiouat" class="cls-4" x="852.263" y="666.949">Nouiouat</text>
+  <text id="_." data-name="." class="cls-2" x="852" y="116">.</text>
+</svg>
