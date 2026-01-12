@@ -35,6 +35,22 @@ function initSmoothScroll() {
     });
 }
 
+// Close Mobile Menu on Outside Click
+function initMobileMenuClose() {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = navbarCollapse.contains(event.target);
+        const isClickOnToggler = navbarToggler.contains(event.target);
+        
+        // If menu is open and click is outside menu and toggler, close it
+        if (navbarCollapse.classList.contains('show') && !isClickInsideMenu && !isClickOnToggler) {
+            navbarToggler.click();
+        }
+    });
+}
+
 // Navbar Background on Scroll
 function initNavbarScroll() {
     window.addEventListener('scroll', function() {
@@ -145,6 +161,7 @@ function initParallaxEffect() {
 document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initSmoothScroll();
+    initMobileMenuClose();
     initNavbarScroll();
     initFadeInAnimation();
     initTypingEffect();
