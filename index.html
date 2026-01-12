@@ -1,178 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ines Nouiouat</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ines Nouiouat - Full Stack DevOps Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="public/images/logo.svg">
-
-  <link rel="stylesheet" href="public/styles/main.css">
-
+    <!-- Devicon for Tech Logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="public/styles/theme.css">
+    <link rel="stylesheet" href="public/styles/components.css">
 </head>
 <body>
-
-  <div class="container">
-    <div class="content-container text-center">
-      <h1 id="main-title">Hi, I am Ines Nouiouat a software developer engineer.</h1><br>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-4 mb-3">
-            <a class="link-button" target="_blank" href="https://github.com/InesNouiouat13/Portfolio">
-              <button class="button button-purple w-100 text-white">
-                <i class="fa-brands fa-github"></i> My Github
-              </button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <span class="text-primary">Ines</span> Nouiouat
             </a>
-          </div>
-          <div class="col-12 col-md-4 mb-3">
-            <a class="link-button" target="_blank" href="public/files/Ines Nouiouat - resume.pdf">
-              <button class="button button-green w-100 text-white">
-                <i class="fa-solid fa-file-pdf"></i> Download Resume
-              </button>
-            </a>
-          </div>
-          <div class="col-12 col-md-4 mb-3">
-            <a class="link-button" target="_blank" href="https://www.linkedin.com/in/ines-nouiouat/">
-              <button class="button button-blue w-100 text-white">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-              </button>
-            </a>
-            
-          </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-toggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <section class="container div-content-container text-center">
-    <div class="alert alert-secondary div-content" id="content_div">
-      <br><br><br><br><br><br>
-      <h3 style="opacity:0.5;">Hover over the icons below <i class="fa-solid fa-arrow-down"></i></h3>
-    </div>
-  </section>
+    </nav>
 
-  <section class="container experience-container" style="margin-top:50px;">
-    <section class="line-points" style="padding: 30px;">
-      <span id="point-0" onmouseover="displayContent('content-point-0')"><i class="fa-solid fa-user-graduate i-lines"></i></span>
-      <span id="point-1" onmouseover="displayContent('content-point-1')"><i class="fa fa-circle-arrow-down i-lines"></i></span>
-      <span id="point-2" onmouseover="displayContent('content-point-2')"><i class="fa-solid fa-circle-arrow-down i-lines"></i></span>
-      <span id="point-3" onmouseover="displayContent('content-point-3')"><i class="fa-solid fa-user-graduate i-lines"></i></span>
-      <span id="point-4" onmouseover="displayContent('content-point-4')"><i class="fa-solid fa-user-graduate i-lines"></i></span>
-      <span id="point-5" onmouseover="displayContent('content-point-5')"><i class="fa fa-circle-arrow-down i-lines"></i></span>
-      <span id="point-6" onmouseover="displayContent('content-point-6')"><i class="fa fa-circle-arrow-down i-lines"></i></span>
-
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Ines Nouiouat</h1>
+                <p class="hero-subtitle">Full Stack DevOps Engineer</p>
+                <p class="hero-summary">
+                    Full-Stack DevOps Engineer bridging high-performance frontends (React/Next.js) and structured backends (Laravel/Express),
+                    applying Hexagonal Architecture for maintainability. Expert in securing Linux environments, managing Azure cloud resources,
+                    and automating deployments via Docker and CI/CD pipelines.
+                </p>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <a href="public/files/Ines Nouiouat - resume.pdf" class="btn-custom btn-primary-custom" target="_blank">
+                        <i class="fas fa-download me-2"></i>Download Resume
+                    </a>
+                    <a href="https://github.com/InesNouiouat13" class="btn-custom btn-outline-custom" target="_blank">
+                        <i class="fab fa-github me-2"></i>GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ines-nouiouat/" class="btn-custom btn-outline-custom" target="_blank">
+                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-  </section>
-  <br><br><br><br>
-  <div class="content" id="content-point-0">
-    <h1 style="opacity:0.9;">High School Diploma in Mathematics</h1>
-    <hr>
-    <p class="animated-text">
-      Graduated from Ali Madoui High School in Bordj Bou Arreridj, Algeria, with a focus on mathematics in July 2017.
-    </p>
-    <br><br>
-    <i style="font-size: 150px; opacity:0.9;" class="fa-solid fa-user-graduate"></i>
-    
-  </div>
-  <div class="content" id="content-point-1">
-    <h1 style="opacity:0.9;">Scientific Clubs and Volunteering</h1>
-    <hr>
-    <div class="row">
-      <div class="col-sm-8 text-left">
-        <div style="text-align: left !important;">
-          <p class="animated-text">
-            Joined various clubs, events and workshops as a Co-organizer.
-          </p>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card fade-in">
+                        <div class="card-body p-4">
+                            <p class="lead text-center">
+                                Full-Stack DevOps Engineer who bridges the gap between sophisticated frontend experiences and enterprise-grade backend systems. I architect complex management platforms—from multi-warehouse e-commerce ecosystems with real-time inventory synchronization to healthcare management systems handling mission-critical clinical data. My work goes beyond code: I design scalable solutions applying Hexagonal Architecture for maintainability, secure Linux infrastructure with Fail2Ban and WAF protection, orchestrate deployments through CI/CD pipelines, and optimize cloud resources on Azure. I combine React/Next.js frontends with Laravel/Express backends, leveraging SSE for live notifications, PL/SQL for complex data operations, and containerized deployments via Docker. Every system I build prioritizes not just code quality, but operational resilience, performance optimization, and the ability to scale without architectural debt.
+                            </p>
+                            <div class="text-center social-links">
+                                <a href="https://github.com/InesNouiouat13" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/ines-nouiouat/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="mailto:ines.nouiouat.bba@gmail.com"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <ul style="text-align: left !important;">
-          <li>Graphic Design: Developed skills in visual design and branding.</li>
-          <li>Social Media Management: Managed and curated content across platforms.</li>
-          <li>Team Collaboration: Contributed to meetings, task organization, and project planning.</li>
-          <li>Public Speaking: Improved presentation and communication skills.</li>
-          <li>Continuous Improvement: Enhanced expertise in social media and graphic design tools such as Photoshop.</li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <div class="modern-frame" style="height:35vh !important;">
-          <img src="public/images/public spaking.jpg" alt="Public Speaking">
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>Full Stack Engineer</h4>
+                        <h5 class="text-primary">Condor Electronics</h5>
+                        <p class="text-secondary">July 2025 - Present</p>
+                        <ul>
+                            <li>Built web apps using React and Next.js connected to RESTful APIs</li>
+                            <li>Deployed applications on Linux servers using Docker</li>
+                            <li>Managed hosting and backend resources using Azure</li>
+                            <li>Implemented CI/CD pipelines and Hexagonal Architecture for maintainable code</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>Software Engineer</h4>
+                        <h5 class="text-primary">Cosparck</h5>
+                        <p class="text-secondary">June 2023 - June 2025</p>
+                        <ul>
+                            <li>Developed complex management solutions with focus on modularity and scalability</li>
+                            <li>Built clinic and laboratory management systems</li>
+                            <li>Applied Hexagonal Architecture principles for long-term maintainability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>Web Developer</h4>
+                        <h5 class="text-primary">Cosparck</h5>
+                        <p class="text-secondary">January 2023 - May 2023</p>
+                        <ul>
+                            <li>Developed unified full-stack platform with custom client support module</li>
+                            <li>Implemented centralized data management for improved service efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>Freelance Full-Stack Developer</h4>
+                        <h5 class="text-primary">Self-Employed</h5>
+                        <p class="text-secondary">2020 - Present</p>
+                        <ul>
+                            <li>Built Laravel e-commerce platform with multi-warehouse inventory</li>
+                            <li>Implemented live notifications using SSE (Server-Sent Events)</li>
+                            <li>Secured Linux VPS with Fail2Ban, WAF, and firewall rules</li>
+                            <li>Optimized Nginx and server settings for performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="content" id="content-point-2">
-    <h1 style="opacity:0.9;">Freelance</h1>
-    <hr>
-    <p class="animated-text">Joined the freelancer world due to the COVID-19 pandemic.</p>
-    <div class="row" style="width:100%;">
-        <div class="col-sm-4">
-          <a style="text-decoration: none;" target="_blank" href="https://www.fiverr.com/ines1313"><img style="height:50%;" src="public/images/Logos/fiverr.svg" alt="Fiverr logo" class="img-fluid"></a>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Platform</h5>
+                            <p class="card-text">
+                                A comprehensive B2B/B2C e-commerce platform built with Laravel, featuring multi-warehouse inventory,
+                                advanced tax calculations, payment processing, and real-time order management with Kanban board.
+                            </p>
+                            <div class="mb-3">
+                                <span class="skill-tag"><i class="devicon-laravel-plain"></i>Laravel</span>
+                                <span class="skill-tag"><i class="devicon-mysql-plain"></i>MySQL</span>
+                                <span class="skill-tag"><i class="devicon-tailwindcss-plain"></i>Tailwind CSS</span>
+                                <span class="skill-tag"><i class="devicon-javascript-plain"></i>JavaScript</span>
+                                <span class="skill-tag"><i class="fas fa-network-wired"></i>REST API</span>
+                            </div>
+                            <a href="https://github.com/InesNouiouat13" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Clinic Management System</h5>
+                            <p class="card-text">
+                                Full-stack healthcare management solution with patient records, appointment scheduling,
+                                and reporting capabilities. Built with modern web technologies and secure data handling.
+                            </p>
+                            <div class="mb-3">
+                                <span class="skill-tag"><i class="devicon-react-original"></i>React</span>
+                                <span class="skill-tag"><i class="devicon-nodejs-plain"></i>Node.js</span>
+                                <span class="skill-tag"><i class="devicon-mongodb-plain"></i>MongoDB</span>
+                                <span class="skill-tag"><i class="devicon-express-original"></i>Express</span>
+                            </div>
+                            <a href="https://github.com/InesNouiouat13" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <a style="text-decoration: none;" target="_blank" href="https://www.derardja-dentiste.com/"><img style="height:50%;" src="public/images/Logos/DH.svg" alt="Other platform logo" class="img-fluid"></a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Backend & DevOps</h5>
+                            <div>
+                                <span class="skill-tag"><i class="devicon-azure-plain"></i> Azure DevOps</span>
+                                <span class="skill-tag"><i class="fas fa-cogs"></i> CI/CD</span>
+                                <span class="skill-tag"><i class="devicon-docker-plain"></i> Docker</span>
+                                <span class="skill-tag"><i class="devicon-linux-plain"></i> Linux</span>
+                                <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+                                <span class="skill-tag"><i class="devicon-laravel-plain"></i> Laravel</span>
+                                <span class="skill-tag"><i class="devicon-express-original"></i> Express.js</span>
+                                <span class="skill-tag"><i class="fas fa-database"></i> RDMS</span>
+                                <span class="skill-tag"><i class="devicon-oracle-plain"></i> PL/SQL</span>
+                                <span class="skill-tag"><i class="fas fa-cubes"></i> NoSQL</span>
+                                <span class="skill-tag"><i class="devicon-python-plain"></i> Python</span>
+                                <span class="skill-tag"><i class="fas fa-layer-group"></i> Hexagonal Architecture</span>
+                                <span class="skill-tag"><i class="fas fa-sitemap"></i> MVC</span>
+                                <span class="skill-tag"><i class="fas fa-network-wired"></i> RESTful APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Frontend & Design</h5>
+                            <div>
+                                <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
+                                <span class="skill-tag"><i class="devicon-nextjs-plain"></i> Next.js</span>
+                                <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                                <span class="skill-tag"><i class="devicon-electron-original"></i> Electron</span>
+                                <span class="skill-tag"><i class="devicon-flutter-plain"></i> Flutter</span>
+                                <span class="skill-tag"><i class="devicon-bootstrap-plain"></i> Bootstrap</span>
+                                <span class="skill-tag"><i class="devicon-figma-plain"></i> Figma</span>
+                                <span class="skill-tag"><i class="devicon-photoshop-plain"></i> Adobe Photoshop</span>
+                                <span class="skill-tag"><i class="fas fa-xd"></i> Adobe XD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Languages</h5>
+                            <div class="text-center">
+                                <span class="skill-tag">English</span>
+                                <span class="skill-tag">French</span>
+                                <span class="skill-tag">Arabic</span>
+                                <span class="skill-tag">Turkish</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-          <a style="text-decoration: none;" target="_blank" href="https://toulouse-serrurier.fr/"><img style="height:50%;" src="public/images/Logos/TS.svg" alt="Another platform logo" class="img-fluid"></a>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Master's Degree in Business Intelligence</h5>
+                            <h6 class="card-subtitle mb-2 text-secondary">Mohamed El Bachir El Ibrahimi University</h6>
+                            <p class="card-text">Bordj Bou Arreridj, Algeria | November 2020 - July 2022</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelor's Degree in Software Engineering</h5>
+                            <h6 class="card-subtitle mb-2 text-secondary">Mohamed El Bachir El Ibrahimi University</h6>
+                            <p class="card-text">Bordj Bou Arreridj, Algeria | October 2017 - October 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div class="content" id="content-point-3">
-  <h1 style="opacity:0.9;">University Licence Degree</h1>
-  <hr>
-    <h3>Software Engineering and Information Systems</h3>
-    <p class="animated-text">
-    Graduated from Mohamed El Bachir El Ibrahimi's univerdity in Bordj Bou Arreridj, Algeria, November 2020.  
-    </p>
- 
-  <i style="font-size: 150px; opacity:0.9;" class="fa-solid fa-user-graduate"></i>
-  
-</div>
- 
-<div class="content" id="content-point-4">
-  <h1 style="opacity:0.9;">University Masters Degree</h1>
-  <hr>
-  <h3>Business Intelligence Engineering</h3>
-  <p class="animated-text">
-    Graduated from Mohamed El Bachir El Ibrahimi's univerdity in Bordj Bou Arreridj, Algeria, July 2022.
-  </p>
-  
-  <i style="font-size: 150px; opacity:0.9;" class="fa-solid fa-user-graduate"></i>
-  
-</div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Let's Connect</h5>
+                            <p class="card-text">I'm always interested in new opportunities and collaborations.</p>
+                            <div class="social-links">
+                                <a href="mailto:ines.nouiouat.bba@gmail.com" title="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://github.com/InesNouiouat13" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ines-nouiouat/" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <p class="mt-3">
+                                <strong>Location:</strong> Bordj Bou Arreridj, Algeria<br>
+                                <strong>Email:</strong> ines.nouiouat.bba@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="content" id="content-point-5">
-  <h1 style="opacity:0.9;">Web Developer at <a style="text-decoration: none;" target="_blank" href="https://www.cosparck.com/">Cosparck</a></h1>
-  <hr>
-  <p class="animated-text">
-    Started my First onsite job after graduation as a web developer, December 2023.
-  </p>
-  <br>
-  <a  target="_blank" href="https://www.cosparck.com/"><img style="width: 50%;" src="https://www.cosparck.com/images/logosmall-white.png"></a>
-  
-</div>
+    <!-- Footer -->
+    <footer class="py-4" style="background: var(--card-bg); color: var(--text-color); border-top: 1px solid rgba(129, 140, 248, 0.15);">
+        <div class="container text-center">
+            <p>&copy; 2025 Ines Nouiouat. All rights reserved.</p>
+        </div>
+    </footer>
 
-
-<div class="content" id="content-point-6">
-  <h1 style="opacity:0.9;">Software Engineer at <a style="text-decoration: none;" target="_blank" href="https://www.cosparck.com/">Cosparck</a></h1>
-  <hr>
-  <p class="animated-text">
-    Software Engineer, involved into more complex projects, July 2023 - Present
-  </p>
-  <br>
-  <a  target="_blank" href="https://www.cosparck.com/"><img style="width: 50%;" src="https://www.cosparck.com/images/logosmall-white.png"></a>
-  
-</div>
-
-  <!-- Bootstrap JS (optional) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./public/scripts/animation.js"></script>
-  <script src="./public/scripts/display_content.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External Scripts -->
+    <script src="public/scripts/theme.js"></script>
+    <script src="public/scripts/main.js"></script>
 </body>
 </html>

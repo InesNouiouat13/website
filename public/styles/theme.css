@@ -1,0 +1,65 @@
+/* Theme Variables and Core Styling */
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #7c3aed;
+    --accent-color: #22d3ee;
+    --dark-color: #1f2937;
+    --light-color: #ffffff;
+    --text-color: #1f2937;
+    --bg-gradient: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+}
+
+[data-theme="dark"] {
+    --primary-color: #818cf8;
+    --secondary-color: #a78bfa;
+    --accent-color: #22d3ee;
+    --dark-color: #e5e7eb;
+    --light-color: #0f172a;
+    --text-color: #e5e7eb;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-shadow: 0 0 20px rgba(129, 140, 248, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(217, 70, 239, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(244, 114, 182, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 40%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
